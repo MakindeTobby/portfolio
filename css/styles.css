@@ -219,18 +219,35 @@
         inset: 0;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-        background: var(--paper);
+        background: rgba(255, 255, 255, 0.18);
         color: var(--ink);
         border-radius: 22px;
         padding: 18px;
-        border: 6px solid rgba(255, 255, 255, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.82);
+        box-shadow:
+          inset 0 0 0 4px rgba(255, 255, 255, 0.12),
+          inset 0 0 16px rgba(255, 255, 255, 0.16);
         overflow: hidden;
       }
+      .badge-face::before {
+        content: "";
+        position: absolute;
+        inset: 9px;
+        z-index: 0;
+        border-radius: 15px;
+        background: var(--paper);
+      }
+      .badge-face > * {
+        position: relative;
+        z-index: 1;
+      }
       .badge-front {
-        background: #f8d8e8;
         display: flex;
         flex-direction: column;
         gap: 10px;
+      }
+      .badge-front::before {
+        background: var(--paper);
       }
       .badge-photo {
         width: 100%;
@@ -503,6 +520,26 @@
       }
       .shot:hover {
         box-shadow: 0 34px 70px rgba(14, 16, 48, 0.38);
+      }
+      .counselr-shot {
+        padding: 16px;
+        background: #fff;
+      }
+      .project-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+      .counselr-shot .chips {
+        position: relative;
+        z-index: 1;
+      }
+      .counselr-shot .chips span {
+        background: rgba(14, 16, 48, 0.86);
+        color: #fff;
       }
       .shot h3 {
         font-size: clamp(24px, 3.4vw, 42px);
