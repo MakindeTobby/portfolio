@@ -1,17 +1,5 @@
 
       (function () {
-        var nav = document.querySelector("nav"),
-          navShown = false;
-        function updateNav() {
-          var show = window.scrollY > 100;
-          if (show !== navShown) {
-            navShown = show;
-            nav.classList.toggle("visible", show);
-            nav.inert = !show;
-          }
-        }
-        updateNav();
-        window.addEventListener("scroll", updateNav, { passive: true });
         var badge = document.getElementById("profile-badge");
         if (
           badge &&
