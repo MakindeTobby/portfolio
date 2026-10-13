@@ -35,6 +35,23 @@ a {
   color: inherit;
 }
 
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 20;
+  transform: translateY(-180%);
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 :focus-visible {
   outline: 3px solid var(--sun);
   outline-offset: 3px;
@@ -610,6 +627,36 @@ nav .cta::before {
   color: #fff;
 }
 
+.media-shot .chips {
+  position: relative;
+  z-index: 1;
+}
+
+.media-shot .chips span {
+  background: rgba(14, 16, 48, 0.86);
+  color: #fff;
+}
+
+.swiftbite-shot {
+  padding: 16px;
+  background: #f4f0ec;
+}
+
+.swiftbite-shot .project-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.swiftbite-shot .chips {
+  position: relative;
+  z-index: 1;
+}
+
+.swiftbite-shot .chips span {
+  background: rgba(14, 16, 48, 0.86);
+  color: #fff;
+}
+
 .shot h3 {
   font-size: clamp(24px, 3.4vw, 42px);
   letter-spacing: -0.03em;
@@ -652,7 +699,11 @@ nav .cta::before {
   font-size: 18px;
 }
 
-.meta b {
+.meta h3 {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
   font-weight: 600;
 }
 
@@ -687,6 +738,32 @@ nav .cta::before {
   object-fit: cover;
   object-position: center 35%;
   display: block;
+}
+
+.portrait-signage {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  z-index: 1;
+  display: grid;
+  gap: 3px;
+  padding: 13px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  background: rgba(14, 16, 48, 0.74);
+  color: #fff;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.portrait-signage strong {
+  font-size: 17px;
+}
+
+.portrait-signage span {
+  font-size: 12px;
+  opacity: 0.85;
 }
 
 #about h2 {
@@ -823,6 +900,10 @@ footer {
 
 /* reveal */
 .rv {
+  opacity: 1;
+}
+
+.scroll-reveal .rv {
   opacity: 0;
   transform: translateY(40px);
   transition:
@@ -830,7 +911,7 @@ footer {
     transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.rv.on {
+.scroll-reveal .rv.on {
   opacity: 1;
   transform: none;
 }

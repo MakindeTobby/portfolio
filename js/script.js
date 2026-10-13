@@ -47,20 +47,28 @@
             h += "<span>" + x + "</span><span>✦</span>";
           });
         document.getElementById("mq").innerHTML = h + h;
-        var io = new IntersectionObserver(
-          function (e) {
-            e.forEach(function (x) {
-              if (x.isIntersecting) {
-                x.target.classList.add("on");
-                io.unobserve(x.target);
-              }
-            });
-          },
-          { threshold: 0.15 },
-        );
-        document.querySelectorAll(".rv").forEach(function (x) {
-          io.observe(x);
-        });
+        var revealItems = document.querySelectorAll(".rv");
+        if ("IntersectionObserver" in window) {
+          document.documentElement.classList.add("scroll-reveal");
+          var io = new IntersectionObserver(
+            function (e) {
+              e.forEach(function (x) {
+                if (x.isIntersecting) {
+                  x.target.classList.add("on");
+                  io.unobserve(x.target);
+                }
+              });
+            },
+            { threshold: 0.15 },
+          );
+          revealItems.forEach(function (x) {
+            io.observe(x);
+          });
+        } else {
+          revealItems.forEach(function (x) {
+            x.classList.add("on");
+          });
+        }
         document.querySelectorAll(".shot").forEach(function (c) {
           c.addEventListener("mousemove", function (e) {
             var r = c.getBoundingClientRect();
