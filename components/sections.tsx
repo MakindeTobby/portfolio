@@ -169,7 +169,7 @@ export function Hero() {
         <div className="relative pt-4 max-w-[1320px]">
           <span className="tag absolute -left-2 -top-1 z-10">Hi, I am</span>
           <h1
-            className="rise font-display text-[clamp(3.4rem,9vw,7.2rem)] font-extrabold leading-[1.02] tracking-tight"
+            className="rise lg:mt-0 mt-3 font-display text-[clamp(3.4rem,9vw,7.2rem)] font-extrabold leading-[1.02] tracking-tight"
             style={{ animationDelay: "100ms" }}
           >
             Tobi
