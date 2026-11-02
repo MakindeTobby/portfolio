@@ -3,8 +3,6 @@ import {
   stops,
   stack,
   services,
-  packages,
-  projects,
   steps,
   checklist,
   testimonials,
@@ -16,8 +14,6 @@ import PackageGrid from "./PackageGrid";
 import RushHour from "./RushHour";
 import Estimator from "./Estimator";
 import WorkSlider from "./WorkSlider";
-import { BrandMark } from "./ui/brand-mark";
-import { Span } from "next/dist/trace";
 
 // max-w-[1480px]
 const wrap = "mx-auto w-full  max-w-[1380px] px-5 sm:px-8 lg:px-12";

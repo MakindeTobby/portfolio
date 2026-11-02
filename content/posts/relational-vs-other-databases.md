@@ -3,7 +3,7 @@ title: "Which database should you start with? A plain-language guide"
 date: 2026-11-01
 description: "Relational databases versus document, key-value and other types: what each is good for, what they cost, and why I start most projects on PostgreSQL."
 tags: [databases, postgresql, architecture]
-draft: true
+draft: false
 ---
 
 Before a single screen is built, every software project hits the same question: where does the data live? Pick well and nobody thinks about it again. Pick badly and you feel it every week, in slow pages, awkward code and surprise bills.
